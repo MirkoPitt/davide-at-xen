@@ -53,10 +53,10 @@ body {
   flex-direction: column;
   /* Ambient orange/okra tinted background washes */
   background-image:
-    radial-gradient(ellipse 50% 60% at 0% 10%, rgba(239, 109, 61, 0.11) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 50% at 100% 30%, rgba(200, 100, 40, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 60% at 0% 60%, rgba(239, 130, 70, 0.07) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 50% at 100% 85%, rgba(180, 80, 30, 0.08) 0%, transparent 50%);
+    radial-gradient(ellipse 50% 60% at 0% 10%, rgba(239, 109, 61, 0.03) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 100% 30%, rgba(200, 100, 40, 0.02) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 0% 60%, rgba(239, 130, 70, 0.018) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 50% at 100% 85%, rgba(180, 80, 30, 0.02   ) 0%, transparent 50%);
 }
 
 /* Film grain overlay — tiled noise texture (replaces expensive SVG feTurbulence) */
@@ -271,12 +271,19 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: auto;
 }
 
+.hero-content picture {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
 .hero-logo {
   width: 320px;
-  height: 320px;
-  margin: 0 auto 32px;
+  height: auto;
+  margin: 0 auto 4px;
   object-fit: contain;
   opacity: 0.9;
+  display: block;
 }
 
 #network-canvas {
@@ -294,6 +301,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.03em;
+  margin-top: 0px;
   margin-bottom: 16px;
 }
 
@@ -490,11 +498,12 @@ section {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 32px;
-  transition: border-color var(--transition), transform var(--transition);
+  transition: border-color 0.15s ease-in, transform 0.15s ease-in;
 }
 .tech-card:hover {
   border-color: var(--border-accent);
   transform: translateY(-2px);
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .tech-icon {

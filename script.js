@@ -160,7 +160,7 @@
     var needsDraw = true;
     var CONNECT_DIST = 170;
     var HOVER_RADIUS = 130;
-    var NODE_COUNT = 120;
+    var NODE_COUNT = 168;
 
     // Colors
     var IDLE_NODE = 'rgba(255, 255, 255, 0.15)';
@@ -184,7 +184,7 @@
       var pad = 20;
       var usableW = w - pad * 2;
       var usableH = h - pad * 2;
-      var exclPad = 5; // tight padding around excluded elements
+      var exclPad = 20;
 
       // Build exclusion zones from hero content elements
       var exclZones = [];
@@ -208,7 +208,7 @@
           y2: lr.bottom - rect.top + exclPad
         });
       }
-      var textEls = document.querySelectorAll('#hero h1, .hero-subtitle, .hero-actions');
+      var textEls = document.querySelectorAll('.hero-line, .hero-subtitle, .hero-actions');
       for (var t = 0; t < textEls.length; t++) {
         var tr = textEls[t].getBoundingClientRect();
         exclZones.push({
